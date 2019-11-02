@@ -1,0 +1,25 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+Role         Level         Count
+
+ID         INTERVAL           1   
+INPUT      BINARY             1   
+INPUT      INTERVAL          16   
+INPUT      NOMINAL            3   
+TARGET     INTERVAL           1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Predicted and decision variables
+
+Type             Variable                   Label
+
+TARGET       acceptance_rate                                
+PREDICTED    P_acceptance_rate    Predicted: acceptance_rate
+RESIDUAL     R_acceptance_rate    Residual: acceptance_rate 

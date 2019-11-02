@@ -1,0 +1,70 @@
+*------------------------------------------------------------*
+User:                Darren
+Date:                01,November,2019
+Time:                19:52:39
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+INPUT      BINARY             1
+INPUT      INTERVAL          16
+INPUT      NOMINAL            3
+TARGET     INTERVAL           1
+ 
+ 
+ 
+ 
+Partition Summary
+ 
+                                     Number of
+Type             Data Set          Observations
+ 
+DATA        EMWS1.FIMPORT_train       124566
+TRAIN       EMWS1.Part_TRAIN           99653
+VALIDATE    EMWS1.Part_VALIDATE        24913
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Summary Statistics for Interval Targets
+ 
+Data=DATA
+ 
+                                                                    Number of                     Standard
+   Variable             Maximum            Mean         Minimum    Observations    Missing       Deviation    Label
+ 
+acceptance_rate               1    0.1854145164               0          124566       0       0.3283042186
+ 
+ 
+Data=TRAIN
+ 
+                                                                    Number of                     Standard
+   Variable             Maximum            Mean         Minimum    Observations    Missing       Deviation    Label
+ 
+acceptance_rate               1    0.1854234612               0           99653       0       0.3284469018
+ 
+ 
+Data=VALIDATE
+ 
+                                                                    Number of                     Standard
+   Variable             Maximum            Mean         Minimum    Observations    Missing       Deviation    Label
+ 
+acceptance_rate               1    0.1853787367               0           24913       0       0.3277394398

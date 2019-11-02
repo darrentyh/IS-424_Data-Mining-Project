@@ -1,0 +1,317 @@
+*------------------------------------------------------------*
+ Node = 4
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 0.5 or MISSING
+then 
+ Tree Node Identifier   = 4
+ Number of Observations = 64107
+ Predicted: acceptance_rate = 0
+ 
+*------------------------------------------------------------*
+ Node = 6
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Rejected < 0.5
+then 
+ Tree Node Identifier   = 6
+ Number of Observations = 8475
+ Predicted: acceptance_rate = 1
+ 
+*------------------------------------------------------------*
+ Node = 16
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 1.5 or MISSING
+AND Rejected >= 0.5 or MISSING
+then 
+ Tree Node Identifier   = 16
+ Number of Observations = 997
+ Predicted: acceptance_rate = 0.5
+ 
+*------------------------------------------------------------*
+ Node = 28
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 2.5 AND Successful >= 1.5
+AND Rejected < 1.5 AND Rejected >= 0.5 or MISSING
+then 
+ Tree Node Identifier   = 28
+ Number of Observations = 320
+ Predicted: acceptance_rate = 0.6666666667
+ 
+*------------------------------------------------------------*
+ Node = 29
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 2.5 AND Successful >= 1.5
+AND Rejected >= 1.5
+then 
+ Tree Node Identifier   = 29
+ Number of Observations = 271
+ Predicted: acceptance_rate = 0.5
+ 
+*------------------------------------------------------------*
+ Node = 34
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 1.5 AND Successful >= 0.5 or MISSING
+AND Rejected < 4.5
+then 
+ Tree Node Identifier   = 34
+ Number of Observations = 1186
+ Predicted: acceptance_rate = 0.2773327712
+ 
+*------------------------------------------------------------*
+ Node = 35
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 2.5 AND Successful >= 1.5
+AND Rejected < 4.5
+then 
+ Tree Node Identifier   = 35
+ Number of Observations = 370
+ Predicted: acceptance_rate = 0.3691891892
+ 
+*------------------------------------------------------------*
+ Node = 36
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 1.5 AND Successful >= 0.5 or MISSING
+AND Rejected < 11.5 AND Rejected >= 4.5 or MISSING
+then 
+ Tree Node Identifier   = 36
+ Number of Observations = 1062
+ Predicted: acceptance_rate = 0.1256527815
+ 
+*------------------------------------------------------------*
+ Node = 37
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 2.5 AND Successful >= 1.5
+AND Rejected < 11.5 AND Rejected >= 4.5 or MISSING
+then 
+ Tree Node Identifier   = 37
+ Number of Observations = 614
+ Predicted: acceptance_rate = 0.2217195128
+ 
+*------------------------------------------------------------*
+ Node = 38
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 4.5 AND Successful >= 2.5 or MISSING
+AND Rejected < 6.5
+then 
+ Tree Node Identifier   = 38
+ Number of Observations = 351
+ Predicted: acceptance_rate = 0.3969101886
+ 
+*------------------------------------------------------------*
+ Node = 39
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 4.5 AND Successful >= 2.5 or MISSING
+AND Rejected < 11.5 AND Rejected >= 6.5 or MISSING
+then 
+ Tree Node Identifier   = 39
+ Number of Observations = 469
+ Predicted: acceptance_rate = 0.2880944216
+ 
+*------------------------------------------------------------*
+ Node = 40
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 6.5 AND Successful >= 4.5 or MISSING
+AND Rejected < 11.5
+then 
+ Tree Node Identifier   = 40
+ Number of Observations = 354
+ Predicted: acceptance_rate = 0.3926806459
+ 
+*------------------------------------------------------------*
+ Node = 41
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful >= 6.5
+AND Rejected < 11.5
+then 
+ Tree Node Identifier   = 41
+ Number of Observations = 159
+ Predicted: acceptance_rate = 0.4459718672
+ 
+*------------------------------------------------------------*
+ Node = 42
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 2.5 AND Successful >= 0.5
+AND Rejected < 32.5 AND Rejected >= 11.5 or MISSING
+then 
+ Tree Node Identifier   = 42
+ Number of Observations = 1278
+ Predicted: acceptance_rate = 0.0727371606
+ 
+*------------------------------------------------------------*
+ Node = 43
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 6.5 AND Successful >= 2.5 or MISSING
+AND Rejected < 32.5 AND Rejected >= 11.5 or MISSING
+then 
+ Tree Node Identifier   = 43
+ Number of Observations = 1313
+ Predicted: acceptance_rate = 0.1856339817
+ 
+*------------------------------------------------------------*
+ Node = 44
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 6.5 AND Successful >= 0.5
+AND Rejected < 80.5 AND Rejected >= 32.5 or MISSING
+then 
+ Tree Node Identifier   = 44
+ Number of Observations = 1291
+ Predicted: acceptance_rate = 0.0591733007
+ 
+*------------------------------------------------------------*
+ Node = 45
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 6.5 AND Successful >= 0.5
+AND Rejected >= 80.5
+then 
+ Tree Node Identifier   = 45
+ Number of Observations = 991
+ Predicted: acceptance_rate = 0.0186140883
+ 
+*------------------------------------------------------------*
+ Node = 46
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 15.5 AND Successful >= 6.5 or MISSING
+AND Rejected < 70.5 AND Rejected >= 11.5
+then 
+ Tree Node Identifier   = 46
+ Number of Observations = 1886
+ Predicted: acceptance_rate = 0.271691229
+ 
+*------------------------------------------------------------*
+ Node = 47
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful >= 15.5
+AND Rejected < 70.5 AND Rejected >= 11.5
+then 
+ Tree Node Identifier   = 47
+ Number of Observations = 1153
+ Predicted: acceptance_rate = 0.3738343948
+ 
+*------------------------------------------------------------*
+ Node = 48
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful < 37.5 AND Successful >= 6.5
+AND Rejected >= 70.5 or MISSING
+then 
+ Tree Node Identifier   = 48
+ Number of Observations = 2245
+ Predicted: acceptance_rate = 0.1056304269
+ 
+*------------------------------------------------------------*
+ Node = 49
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 0 or MISSING
+AND Successful >= 37.5 or MISSING
+AND Rejected >= 70.5 or MISSING
+then 
+ Tree Node Identifier   = 49
+ Number of Observations = 3120
+ Predicted: acceptance_rate = 0.2506945349
+ 
+*------------------------------------------------------------*
+ Node = 50
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 7.5 AND Successful >= 2.5 or MISSING
+AND Rejected < 1.5 AND Rejected >= 0.5 or MISSING
+then 
+ Tree Node Identifier   = 50
+ Number of Observations = 557
+ Predicted: acceptance_rate = 0.8019128836
+ 
+*------------------------------------------------------------*
+ Node = 51
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 7.5 AND Successful >= 2.5 or MISSING
+AND Rejected < 2.5 AND Rejected >= 1.5
+then 
+ Tree Node Identifier   = 51
+ Number of Observations = 393
+ Predicted: acceptance_rate = 0.6744759481
+ 
+*------------------------------------------------------------*
+ Node = 52
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 15.5 AND Successful >= 7.5
+AND Rejected < 2.5 AND Rejected >= 0.5
+then 
+ Tree Node Identifier   = 52
+ Number of Observations = 318
+ Predicted: acceptance_rate = 0.8767122822
+ 
+*------------------------------------------------------------*
+ Node = 53
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful >= 15.5 or MISSING
+AND Rejected < 2.5 AND Rejected >= 0.5
+then 
+ Tree Node Identifier   = 53
+ Number of Observations = 385
+ Predicted: acceptance_rate = 0.9590814961
+ 
+*------------------------------------------------------------*
+ Node = 54
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 6.5 AND Successful >= 2.5
+AND Rejected >= 2.5 or MISSING
+then 
+ Tree Node Identifier   = 54
+ Number of Observations = 625
+ Predicted: acceptance_rate = 0.5467893795
+ 
+*------------------------------------------------------------*
+ Node = 55
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful < 28.5 AND Successful >= 6.5 or MISSING
+AND Rejected >= 2.5 or MISSING
+then 
+ Tree Node Identifier   = 55
+ Number of Observations = 1798
+ Predicted: acceptance_rate = 0.6483436121
+ 
+*------------------------------------------------------------*
+ Node = 56
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful >= 28.5 or MISSING
+AND Rejected < 18.5 AND Rejected >= 2.5
+then 
+ Tree Node Identifier   = 56
+ Number of Observations = 1013
+ Predicted: acceptance_rate = 0.8780512134
+ 
+*------------------------------------------------------------*
+ Node = 57
+*------------------------------------------------------------*
+if accepted/rejected IS ONE OF: 1
+AND Successful >= 28.5 or MISSING
+AND Rejected >= 18.5 or MISSING
+then 
+ Tree Node Identifier   = 57
+ Number of Observations = 2552
+ Predicted: acceptance_rate = 0.6995437593
+ 
