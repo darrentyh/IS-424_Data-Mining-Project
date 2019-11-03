@@ -12,7 +12,7 @@ label _dataobs_ = "%sysfunc(sasmsg(sashelp.dmine, sample_dataobs_vlabel, NOQUOTE
 _dataobs_ = _N_;
 drop _c00:;
 set EMWS1.FIMPORT_train;
-if (124566 +1-_n_)*_genvalue_ <= (99653 - _C000001) then do;
+if (23592 +1-_n_)*_genvalue_ <= (18874 - _C000001) then do;
 _C000001 + 1;
 output EMWS1.Part_TRAIN;
 end;

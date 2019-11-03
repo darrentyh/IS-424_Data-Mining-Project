@@ -2,9 +2,9 @@
  Delimiter="," NameRow="Y" SkipRows="0" MaxRows="1000000" MaxCols="10000" FileType="csv"
  Role="TRAIN" ForceRun="N" Summarize="N" AdvancedAdvisor="N" RunAction="Train" Component="FileImport"
  IFileName="C:\Users\Darren\Desktop\SMU\Term 3A\DM\Group Project\cleaned_data\cleaned_asylum_seekers_added.csv"
- AccessTable="NoTableName" UserID="NoUserID" Password="NoPassword" RawCreateTime="1888255453.6"
- CreateTime="01NOV2019:19:24:14" RunId="8b3f1198-3fc5-4d73-b71a-2cc300c49c36" RawLastTimeRun="1888257143.5"
- RawRunTime="8.8260002136" LastTimeRun="01NOV2019:19:52:23" RunTime="0 Hr. 0 Min. 8.83 Sec."
+ AccessTable="NoTableName" UserID="NoUserID" Password="NoPassword" RawCreateTime="1888348693.8"
+ CreateTime="02NOV2019:21:18:14" RunId="d8f1cbd9-cb23-44e9-987b-6327d1ee472b" RawLastTimeRun="1888349013.9"
+ RawRunTime="5.2619998455" LastTimeRun="02NOV2019:21:23:34" RunTime="0 Hr. 0 Min. 5.26 Sec."
 >
 <VARIABLEPROPERTIES/>
 <FILEPROPERTIES ><![CDATA[

@@ -1,7 +1,7 @@
 *------------------------------------------------------------*
 User:                Darren
-Date:                01,November,2019
-Time:                19:52:32
+Date:                02,November,2019
+Time:                21:23:39
 *------------------------------------------------------------*
 * Training Output
 *------------------------------------------------------------*
@@ -11,13 +11,12 @@ Time:                19:52:32
  
 Variable Summary
  
-          Measurement    Frequency
- Role        Level         Count
+         Measurement    Frequency
+Role        Level         Count
  
-INPUT      BINARY             1
-INPUT      INTERVAL          16
-INPUT      NOMINAL            3
-TARGET     INTERVAL           1
+INPUT     INTERVAL          11
+INPUT     NOMINAL            3
+LABEL     INTERVAL           1
  
  
  
@@ -25,11 +24,11 @@ TARGET     INTERVAL           1
  
 The CONTENTS Procedure
  
-Data Set Name        EMWS1.FIMPORT_DATA            Observations          124566
-Member Type          DATA                          Variables             21
+Data Set Name        EMWS1.FIMPORT_DATA            Observations          23592
+Member Type          DATA                          Variables             15
 Engine               V9                            Indexes               0
-Created              01/11/2019 19:52:28           Observation Length    216
-Last Modified        01/11/2019 19:52:28           Deleted Observations  0
+Created              02/11/2019 21:23:37           Observation Length    168
+Last Modified        02/11/2019 21:23:37           Deleted Observations  0
 Protection                                         Compressed            NO
 Data Set Type                                      Sorted                NO
 Label
@@ -40,10 +39,10 @@ Encoding             wlatin1  Western (Windows)
                                                   Engine/Host Dependent Information
  
 Data Set Page Size          65536
-Number of Data Set Pages    412
+Number of Data Set Pages    61
 First Data Page             1
-Max Obs per Page            303
-Obs in First Data Page      286
+Max Obs per Page            389
+Obs in First Data Page      372
 Number of Data Set Repairs  0
 ExtendObsCounter            YES
 Filename                    C:\Users\Darren\Desktop\SMU\Term 3A\DM\Group Project\project_asylum\Workspaces\EMWS1\fimport_data.sas7bdat
@@ -55,27 +54,21 @@ Host Created                X64_8HOME
  
  #    Variable                            Type    Len    Format     Informat    Label
  
-13    Applied_during_year                 Num       8                           Applied during year
- 9    Country___territory_of_asylum_re    Char     41                           Country / territory of asylum/re
-21    Encoded_Origin                      Num       8                           Encoded Origin
-20    Encoded_Target_Country              Num       8                           Encoded Target Country
-19    Encoded_procedure_type              Num       8                           Encoded procedure type
- 2    Origin                              Char     20    $20.       $20.
-14    Otherwise_closed                    Num       8                           Otherwise closed
+ 9    Country___territory_of_asylum_re    Char     19                           Country / territory of asylum/re
+15    Encoded_Origin                      Num       8                           Encoded Origin
+14    Encoded_Target_Country              Num       8                           Encoded Target Country
+13    Encoded_procedure_type              Num       8                           Encoded procedure type
+ 1    Origin                              Char     41    $41.       $41.
+ 5    Otherwise_closed                    Num       8    BEST12.    BEST32.
 10    RSD_procedure_type___level          Char      6                           RSD procedure type / level
- 5    Rejected                            Num       8    BEST12.    BEST32.
+ 4    Rejected                            Num       8    BEST12.    BEST32.
  6    Successful                          Num       8    BEST12.    BEST32.
-11    Tota_pending_start_year             Num       8                           Tota pending start-year
-15    Total_decisions                     Num       8                           Total decisions
-16    Total_pending_end_year              Num       8                           Total pending end-year
+11    Total_decisions                     Num       8                           Total decisions
  7    Unsuccessful                        Num       8    BEST12.    BEST32.
- 1    Year                                Num       8    BEST12.    BEST32.
  8    acceptance_rate                     Num       8    BEST12.    BEST32.
-18    accepted_rejected                   Num       8                           accepted/rejected
- 4    decisions_other                     Num       8    BEST12.    BEST32.
- 3    decisions_recognized                Num       8    BEST12.    BEST32.
-17    of_which_UNHCR_assisted_end_year    Num       8                           of which UNHCR-assisted(end-year
-12    of_which_UNHCR_assisted_start_ye    Num       8                           of which UNHCR-assisted(start-ye
+12    accepted_rejected                   Num       8                           accepted/rejected
+ 3    decisions_other                     Num       8    BEST12.    BEST32.
+ 2    decisions_recognized                Num       8    BEST12.    BEST32.
 
 
 *------------------------------------------------------------*
@@ -92,10 +85,9 @@ Host Created                X64_8HOME
  
 Exported Attributes for TRAIN Port
  
-          Measurement    Frequency
- Role        Level         Count
+         Measurement    Frequency
+Role        Level         Count
  
-INPUT      BINARY             1
-INPUT      INTERVAL          16
-INPUT      NOMINAL            3
-TARGET     INTERVAL           1
+INPUT     INTERVAL          11
+INPUT     NOMINAL            3
+LABEL     INTERVAL           1

@@ -3,8 +3,8 @@ MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
 MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   data _null_;
-MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "01,November,2019" );
-MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "19:52:30" );
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "02,November,2019" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "21:23:37" );
 MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
 MPRINT(EM_DIAGRAM):   put "* Score Log";
 MPRINT(EM_DIAGRAM):   put nldate;
@@ -13,100 +13,100 @@ MPRINT(EM_DIAGRAM):   put "*----------------------------------------------------
 MPRINT(EM_DIAGRAM):   run;
 *------------------------------------------------------------*
 * Score Log
-Date:                01,November,2019
-Time:                19:52:30
+Date:                02,November,2019
+Time:                21:23:37
 *------------------------------------------------------------*
-MPRINT(EM_DIAGRAM):    filename O1ODNZ7T "C:\Users\Darren\Desktop\SMU\Term 3A\DM\Group Project\project_asylum\Workspaces\EMWS1\FIMPORT\EMSCORE.out" encoding="UTF-8" NOBOM;
-MPRINT(EM_DIAGRAM):   proc printto print=O1ODNZ7T new;
+MPRINT(EM_DIAGRAM):    filename O3FER209 "C:\Users\Darren\Desktop\SMU\Term 3A\DM\Group Project\project_asylum\Workspaces\EMWS1\FIMPORT\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O3FER209 new;
 MPRINT(EM_DIAGRAM):   run;
-22918      %let EMEXCEPTIONSTRING=;
-22919      *------------------------------------------------------------*;
+22803      %let EMEXCEPTIONSTRING=;
+22804      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
-22920      * SCORE: FIMPORT;
+22805      * SCORE: FIMPORT;
 MPRINT(EM_DIAGRAM):   * SCORE: FIMPORT;
-22921      *------------------------------------------------------------*;
+22806      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-22922      %let EM_ACTION = SCORE;
-22923      %let syscc = 0;
-22924      /* Fimport.source */
-22925      %macro main;
-22926            %if %upcase(&EM_ACTION) = CREATE %then %do;
-22927               filename temp catalog 'sashelp.emsamp.Fimport_create.source';
-22928               %include temp;
-22929               filename temp;
-22930               %create;
-22931            %end;
-22932            %else
-22933            %if %upcase(&EM_ACTION) = TRAIN %then %do;
-22934               filename temp catalog 'sashelp.emsamp.Fimport_train.source';
-22935               %include temp;
-22936               filename temp;
-22937               %train;
-22938            %end;
-22939            %else
-22940            %if %upcase(&EM_ACTION) = UPDATE %then %do;
-22941               filename temp catalog 'sashelp.emsamp.Fimport_update.source';
-22942               %include temp;
-22943               filename temp;
-22944               %update;
-22945            %end;
-22946            %else
-22947            %if %upcase(&EM_ACTION) = PROPERTY %then %do;
-22948               filename temp catalog 'sashelp.emsamp.Fimport_actions.source';
-22949               %include temp;
-22950               filename temp;
-22951               %property;
-22952            %end;
-22953             %else
-22954            %if %upcase(&EM_ACTION) = SCORE %then %do;
-22955               filename temp catalog 'sashelp.emsamp.Fimport_score.source';
-22956               %include temp;
-22957               filename temp;
-22958               %score;
-22959            %end;
-22960            %else
-22961            %if %upcase(&EM_ACTION) = REPORT %then %do;
-22962               filename temp catalog 'sashelp.emsamp.Fimport_report.source';
-22963               %include temp;
-22964               filename temp;
-22965               %report;
-22966            %end;
-22967            %else
-22968            %if %upcase(&EM_ACTION) = OPENVARIABLESET %then %do;
-22969               filename temp catalog 'sashelp.emsamp.Fimport_actions.source';
-22970               %include temp;
-22971               filename temp;
-22972               %openvariableset;
-22973            %end;
-22974            %else
-22975            %if %upcase(&EM_ACTION) = CLOSEVARIABLESET %then %do;
-22976               filename temp catalog 'sashelp.emsamp.Fimport_actions.source';
-22977               %include temp;
-22978               filename temp;
-22979               %closevariableset;
-22980            %end;
-22981      %mend main;
-22982      %main;
+22807      %let EM_ACTION = SCORE;
+22808      %let syscc = 0;
+22809      /* Fimport.source */
+22810      %macro main;
+22811            %if %upcase(&EM_ACTION) = CREATE %then %do;
+22812               filename temp catalog 'sashelp.emsamp.Fimport_create.source';
+22813               %include temp;
+22814               filename temp;
+22815               %create;
+22816            %end;
+22817            %else
+22818            %if %upcase(&EM_ACTION) = TRAIN %then %do;
+22819               filename temp catalog 'sashelp.emsamp.Fimport_train.source';
+22820               %include temp;
+22821               filename temp;
+22822               %train;
+22823            %end;
+22824            %else
+22825            %if %upcase(&EM_ACTION) = UPDATE %then %do;
+22826               filename temp catalog 'sashelp.emsamp.Fimport_update.source';
+22827               %include temp;
+22828               filename temp;
+22829               %update;
+22830            %end;
+22831            %else
+22832            %if %upcase(&EM_ACTION) = PROPERTY %then %do;
+22833               filename temp catalog 'sashelp.emsamp.Fimport_actions.source';
+22834               %include temp;
+22835               filename temp;
+22836               %property;
+22837            %end;
+22838             %else
+22839            %if %upcase(&EM_ACTION) = SCORE %then %do;
+22840               filename temp catalog 'sashelp.emsamp.Fimport_score.source';
+22841               %include temp;
+22842               filename temp;
+22843               %score;
+22844            %end;
+22845            %else
+22846            %if %upcase(&EM_ACTION) = REPORT %then %do;
+22847               filename temp catalog 'sashelp.emsamp.Fimport_report.source';
+22848               %include temp;
+22849               filename temp;
+22850               %report;
+22851            %end;
+22852            %else
+22853            %if %upcase(&EM_ACTION) = OPENVARIABLESET %then %do;
+22854               filename temp catalog 'sashelp.emsamp.Fimport_actions.source';
+22855               %include temp;
+22856               filename temp;
+22857               %openvariableset;
+22858            %end;
+22859            %else
+22860            %if %upcase(&EM_ACTION) = CLOSEVARIABLESET %then %do;
+22861               filename temp catalog 'sashelp.emsamp.Fimport_actions.source';
+22862               %include temp;
+22863               filename temp;
+22864               %closevariableset;
+22865            %end;
+22866      %mend main;
+22867      %main;
 MPRINT(EM_DIAGRAM):    
 MPRINT(MAIN):   filename temp catalog 'sashelp.emsamp.Fimport_score.source';
 NOTE: %INCLUDE (level 1) file TEMP is file SASHELP.EMSAMP.FIMPORT_SCORE.SOURCE.
-22983     +%macro score;
-22984     +
-22985     +   filename x "&EM_NODEDIR.&EM_DSEP._updatePath.st";
-22986     +   data _null_;
-22987     +      file x;
-22988     +      put ' ';
-22989     +   run;
-22990     +   filename x;
-22991     +
-22992     +   %em_getname(key=DATA, type=DATA);
-22993     +   %if %sysfunc(exist(&em_user_data)) %then %do;
-22994     +       data &em_export_train / view=&em_export_train;
-22995     +          set &em_user_data;
-22996     +       run;
-22997     +   %end;
-22998     +
-22999     +%mend score;
+22868     +%macro score;
+22869     +
+22870     +   filename x "&EM_NODEDIR.&EM_DSEP._updatePath.st";
+22871     +   data _null_;
+22872     +      file x;
+22873     +      put ' ';
+22874     +   run;
+22875     +   filename x;
+22876     +
+22877     +   %em_getname(key=DATA, type=DATA);
+22878     +   %if %sysfunc(exist(&em_user_data)) %then %do;
+22879     +       data &em_export_train / view=&em_export_train;
+22880     +          set &em_user_data;
+22881     +       run;
+22882     +   %end;
+22883     +
+22884     +%mend score;
 NOTE: %INCLUDE (level 1) ending.
 MPRINT(MAIN):   filename temp;
 NOTE: Fileref TEMP has been deassigned.
@@ -119,14 +119,14 @@ MPRINT(SCORE):   run;
 NOTE: The file X is:
       Filename=C:\Users\Darren\Desktop\SMU\Term 3A\DM\Group Project\project_asylum\Workspaces\EMWS1\FIMPORT\_updatePath.st,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=01,November,2019 19:52:29,
-      Create Time=01,November,2019 19:51:52
+      Last Modified=02,November,2019 21:23:37,
+      Create Time=02,November,2019 21:22:57
 
 NOTE: 1 record was written to the file X.
       The minimum record length was 1.
       The maximum record length was 1.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 
@@ -140,7 +140,7 @@ MPRINT(SCORE):   run;
 NOTE: DATA STEP view saved on file EMWS1.FIMPORT_TRAIN.
 NOTE: A stored DATA STEP view cannot run under a different operating system.
 NOTE: DATA statement used (Total process time):
-      real time           0.03 seconds
+      real time           0.02 seconds
       cpu time            0.01 seconds
       
 
@@ -149,15 +149,15 @@ MPRINT(EM_DIAGRAM):  ;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   * End SCORE: FIMPORT;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
-23000      *------------------------------------------------------------*;
-23001      * End SCORE: FIMPORT;
-23002      *------------------------------------------------------------*;
+22885      *------------------------------------------------------------*;
+22886      * End SCORE: FIMPORT;
+22887      *------------------------------------------------------------*;
 
-23004      *------------------------------------------------------------*;
+22889      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):     *------------------------------------------------------------*;
-23005      * FIMPORT: Computing metadata for TRAIN data;
+22890      * FIMPORT: Computing metadata for TRAIN data;
 MPRINT(EM_DIAGRAM):   * FIMPORT: Computing metadata for TRAIN data;
-23006      *------------------------------------------------------------*;
+22891      *------------------------------------------------------------*;
 MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
 
 NOTE: View EMWS1.FIMPORT_TRAIN.VIEW used (Total process time):
@@ -182,12 +182,12 @@ MPRINT(EMADVISECOLUMNS):   call symput('_engineTable', attrc(dsid, 'ENGINE'));
 MPRINT(EMADVISECOLUMNS):   dsid = close(dsid);
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    proc contents data=EMWS1.FIMPORT_train out=WORK.M1XNEEJS noprint;
+MPRINT(EMADVISECOLUMNS):    proc contents data=EMWS1.FIMPORT_train out=WORK.M27_4H6_ noprint;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M1XNEEJS;
+MPRINT(EMADVISECOLUMNS):    data WORK.M27_4H6_;
 MPRINT(EMADVISECOLUMNS):   length NAME $ 64 TYPE $ 1 LABEL $ 200 FORMAT $ 36 INFORMAT $36 INDEX $ 1 INDEXTYPE $ 9;
 MPRINT(EMADVISECOLUMNS):   label NAME =;
-MPRINT(EMADVISECOLUMNS):   set WORK.M1XNEEJS(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
+MPRINT(EMADVISECOLUMNS):   set WORK.M27_4H6_(keep=name type length label format formatl formatd informat informl informd idxusage rename=(type=itype));
 MPRINT(EMADVISECOLUMNS):   if itype = 1 then type = 'N';
 MPRINT(EMADVISECOLUMNS):   else type = 'C';
 MPRINT(EMADVISECOLUMNS):   if formatl > 0 then do;
@@ -211,21 +211,21 @@ MPRINT(EMADVISECOLUMNS):   else index = "Y";
 MPRINT(EMADVISECOLUMNS):   indextype = idxusage;
 MPRINT(EMADVISECOLUMNS):   drop idxusage itype formatl formatd informl informd;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M1XNEEJS;
+MPRINT(EMADVISECOLUMNS):    data WORK.M27_4H6_;
 MPRINT(EMADVISECOLUMNS):   length UNAME $64;
-MPRINT(EMADVISECOLUMNS):   set WORK.M1XNEEJS;
+MPRINT(EMADVISECOLUMNS):   set WORK.M27_4H6_;
 MPRINT(EMADVISECOLUMNS):   UNAME = upcase(NAME);
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    proc sort data=WORK.M1NJGBTW NOTHREADS;
+MPRINT(EMADVISECOLUMNS):    proc sort data=WORK.M269L1XH NOTHREADS;
 MPRINT(EMADVISECOLUMNS):   by UNAME;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M1NJGBTW;
+MPRINT(EMADVISECOLUMNS):    data WORK.M269L1XH;
 MPRINT(EMADVISECOLUMNS):   drop UNAME;
-MPRINT(EMADVISECOLUMNS):   set WORK.M1NJGBTW;
+MPRINT(EMADVISECOLUMNS):   set WORK.M269L1XH;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M0VRCEJL(keep=NAME ATTR);
+MPRINT(EMADVISECOLUMNS):    data WORK.M2Q90IYE(keep=NAME ATTR);
 MPRINT(EMADVISECOLUMNS):   length ATTR $ 20;
-MPRINT(EMADVISECOLUMNS):   set WORK.M1NJGBTW;
+MPRINT(EMADVISECOLUMNS):   set WORK.M269L1XH;
 MPRINT(EMADVISECOLUMNS):   if level ne "INTERVAL" then do;
 MPRINT(EMADVISECOLUMNS):   if order = ' ' then do;
 MPRINT(EMADVISECOLUMNS):   attr = 'ORDER';
@@ -260,10 +260,10 @@ MPRINT(EMADVISECOLUMNS):   run;
 MPRINT(EMADVISECOLUMNS):   proc sort NOTHREADS;
 MPRINT(EMADVISECOLUMNS):   by attr;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M1NJGBTW;
+MPRINT(EMADVISECOLUMNS):    data WORK.M269L1XH;
 MPRINT(EMADVISECOLUMNS):   length NAME $64 ROLE $ 32 LEVEL $ 10 ORDER $ 8 CREATOR $32 FORMATTYPE $ 10 FAMILY $ 10 LOWERLIMIT 8 UPPERLIMIT 8 REPORT $1 DISTRIBUTION $ 20 COMMENT $64;
 MPRINT(EMADVISECOLUMNS):   length levelAssigned 8 roleAssigned 8 PRICE 8;
-MPRINT(EMADVISECOLUMNS):   set WORK.M1NJGBTW;
+MPRINT(EMADVISECOLUMNS):   set WORK.M269L1XH;
 MPRINT(EMADVISECOLUMNS):   if formattype = ' ' then do;
 MPRINT(EMADVISECOLUMNS):   if format ne ' ' then do;
 MPRINT(EMADVISECOLUMNS):   if type = 'N' then do;
@@ -424,8 +424,8 @@ MPRINT(EMADVISECOLUMNS):   if ROLE ^in('INPUT', 'TARGET', 'REJECTED', 'SEGMENT',
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   end;
 MPRINT(EMADVISECOLUMNS):   run;
-MPRINT(EMADVISECOLUMNS):    data WORK.M1NJGBTW;
-MPRINT(EMADVISECOLUMNS):   set WORK.M1NJGBTW;
+MPRINT(EMADVISECOLUMNS):    data WORK.M269L1XH;
+MPRINT(EMADVISECOLUMNS):   set WORK.M269L1XH;
 MPRINT(EMADVISECOLUMNS):   label NAME = "Variable Name" TYPE = "Type" ROLE = "Role" LEVEL= "Measurement Level" ORDER= "Order" CREATOR= "Creator" FORMATTYPE= "Format Type" FAMILY= "Family" DISTRIBUTION= "Distribution" PRICE= "Price" LOWERLIMIT= "Lower 
 limit" UPPERLIMIT= "Upper Limit" REPORT= "Report" COMMENT= "Comment" INDEX= "Index" INDEXTYPE= "IndexType" LABEL= "Label" LENGTH= "Length";
 MPRINT(EMADVISECOLUMNS):   drop levelAssigned roleAssigned;
@@ -459,14 +459,9 @@ MPRINT(EM_DIAGRAM):   ROLE="INPUT";
 MPRINT(EM_DIAGRAM):   LEVEL="INTERVAL";
 MPRINT(EM_DIAGRAM):   ORDER="";
 MPRINT(EM_DIAGRAM):   end;
-MPRINT(EM_DIAGRAM):   if NAME="acceptance_rate" then do;
-MPRINT(EM_DIAGRAM):   ROLE="TARGET";
-MPRINT(EM_DIAGRAM):   LEVEL="INTERVAL";
-MPRINT(EM_DIAGRAM):   ORDER="";
-MPRINT(EM_DIAGRAM):   end;
 MPRINT(EM_DIAGRAM):   if NAME="accepted_rejected" then do;
-MPRINT(EM_DIAGRAM):   ROLE="INPUT";
-MPRINT(EM_DIAGRAM):   LEVEL="BINARY";
+MPRINT(EM_DIAGRAM):   ROLE="LABEL";
+MPRINT(EM_DIAGRAM):   LEVEL="INTERVAL";
 MPRINT(EM_DIAGRAM):   ORDER="";
 MPRINT(EM_DIAGRAM):   end;
 MPRINT(EM_DIAGRAM):   if NAME="decisions_other" then do;
@@ -483,7 +478,7 @@ MPRINT(EM_DIAGRAM):   drop DROP;
 MPRINT(EM_DIAGRAM):   run;
 MPRINT(EM_DIAGRAM):   filename _delta;
 NOTE: View EMWS1.FIMPORT_TRAIN.VIEW used (Total process time):
-      real time           0.03 seconds
+      real time           0.02 seconds
       cpu time            0.03 seconds
       
 MPRINT(EM_DIAGRAM):    proc printto;

@@ -1,34 +1,10 @@
 *------------------------------------------------------------*
 User:                Darren
 Date:                02,November,2019
-Time:                21:23:42
+Time:                21:23:44
 *------------------------------------------------------------*
 * Training Output
 *------------------------------------------------------------*
- 
- 
- 
- 
-Variable Summary
- 
-         Measurement    Frequency
-Role        Level         Count
- 
-INPUT     INTERVAL          11
-INPUT     NOMINAL            3
-LABEL     INTERVAL           1
- 
- 
- 
- 
-Partition Summary
- 
-                                     Number of
-Type             Data Set          Observations
- 
-DATA        EMWS1.FIMPORT_train        23592
-TRAIN       EMWS1.Part_TRAIN           18874
-VALIDATE    EMWS1.Part_VALIDATE         4718
 
 
 *------------------------------------------------------------*
