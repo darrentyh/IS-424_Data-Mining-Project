@@ -149,7 +149,7 @@ library(d3Network)
  &nbsp;&nbsp;|- AsylumSeekers EDA(new).twbx  
  &nbsp;&nbsp;|- AsylumSeekers EDA.twbx    
  &nbsp;&nbsp;|- Demographics.twbx    
- &nbsp;&nbsp;|- Distance_difference.csv 
+ &nbsp;&nbsp;|- Distance_difference.csv  
  &nbsp;&nbsp;|- Distance_difference.twbx   
  &nbsp;&nbsp;|- GDP_perCapita.twbx  
  &nbsp;&nbsp;|- GDPperCapita.csv  
@@ -167,7 +167,7 @@ library(d3Network)
 |- model_notebook - This folder contains the python jupyter notebook files used for building the machine learning models
  &nbsp;&nbsp;|- Adaboost_classifier.ipynb      
  &nbsp;&nbsp;|- Decision_Tree_Model.ipynb     
- &nbsp;&nbsp;|- Logistic Regression.ipynb 
+ &nbsp;&nbsp;|- Logistic Regression.ipynb  
  &nbsp;&nbsp;|- Naive_Bayes_SVM_Model.ipynb      
  &nbsp;&nbsp;|- Random_Forest_Model.ipynb    
 
