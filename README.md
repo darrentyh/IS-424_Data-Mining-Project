@@ -1,6 +1,5 @@
-# IS-434_Data-Mining-Project
-
-Analysis on Asylum seekers migration pattern and demographics 
+# Finding a Safe Haven For Refugees
+A quantitative study on the factors affecting a refugee's acceptance rate
 
 ## Packages Used (Python)
 
