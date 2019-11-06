@@ -86,40 +86,40 @@ Provides access to the mathematical functions defined by the C standard. - https
 
 The python packages used in this project can be installed using the following commands:
 
-pip install numpy
-pip install pandas
-pip install geocoder
-pip install geotext
-pip install seaborn
-pip install scikit-learn
+pip install numpy  
+pip install pandas  
+pip install geocoder  
+pip install geotext  
+pip install seaborn  
+pip install scikit-learn  
 
 math and re libray are built-in python module and do not require any installation
 
 ## Packages used (R)
 
-library(ggplot2)
-library(readr)
-library(leaflet)
-library(knitr)
-library(highcharter)
-library(plyr)
-library(dplyr)
-library(tidyr)
-library(viridis)
-library(plotly)
-library(tidyr)
-library(maps)
-library(ggmap)
-library(gridExtra)
-library(countrycode)
-library(stringr)
-library(tidyverse)
-library(maps)
-library(geosphere)
-library(ggmap)
-library(maptools)
-library(networkD3)
-library(d3Network)
+library(ggplot2)  
+library(readr)  
+library(leaflet)  
+library(knitr)  
+library(highcharter)  
+library(plyr)  
+library(dplyr)  
+library(tidyr)  
+library(viridis)  
+library(plotly)  
+library(tidyr)  
+library(maps)  
+library(ggmap)  
+library(gridExtra)  
+library(countrycode)  
+library(stringr)  
+library(tidyverse)  
+library(maps)  
+library(geosphere)  
+library(ggmap)  
+library(maptools)  
+library(networkD3)  
+library(d3Network)  
 
 ## Folder Structure
 |- original data - This folder contains all the data files which we had downloaded from Kaggle, https://www.kaggle.com/unitednations/refugee-data  
