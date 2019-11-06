@@ -1,6 +1,5 @@
-# IS-434_Data-Mining-Project
-
-Analysis on Asylum seekers migration pattern and demographics 
+# Finding a Safe Haven For Refugees
+A quantitative study on the factors affecting a refugee's acceptance rate
 
 ## Packages Used (Python)
 
@@ -124,8 +123,18 @@ library(d3Network)
 
 ## Folder Structure
 |- original data - This folder contains all the data files which we had downloaded from Kaggle, https://www.kaggle.com/unitednations/refugee-data
+ &nbsp;&nbsp;|- asylum_seekers.csv  
+ &nbsp;&nbsp;|- asylum_seekers_monthly.csv  
+ &nbsp;&nbsp;|- demographics.csv  
+ &nbsp;&nbsp;|- persons_of_concern.csv  
+ &nbsp;&nbsp;|- resettlement.csv  
+ &nbsp;&nbsp;|- time_series.csv  
+
 |- cleaned_data - This folder contains all the data files which are being preprocessed 
+
 |- EDA - This folder contains the Tableau workbooks and R files used to perform exploratory data analysis
+
 |- general_notebook - This folder contains the python jupyter notebook files used for data preprocessing and exploratory data analysis
+
 |- model_notebook - This folder contains the python jupyter notebook files used for building the machine learning models
 
