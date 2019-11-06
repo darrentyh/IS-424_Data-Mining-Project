@@ -122,7 +122,7 @@ library(networkD3)
 library(d3Network)
 
 ## Folder Structure
-|- original data - This folder contains all the data files which we had downloaded from Kaggle, https://www.kaggle.com/unitednations/refugee-data
+|- original data - This folder contains all the data files which we had downloaded from Kaggle, https://www.kaggle.com/unitednations/refugee-data  
  &nbsp;&nbsp;|- asylum_seekers.csv  
  &nbsp;&nbsp;|- asylum_seekers_monthly.csv  
  &nbsp;&nbsp;|- demographics.csv  
@@ -130,7 +130,7 @@ library(d3Network)
  &nbsp;&nbsp;|- resettlement.csv  
  &nbsp;&nbsp;|- time_series.csv  
 
-|- cleaned_data - This folder contains all the data files which are being preprocessed 
+|- cleaned_data - This folder contains all the data files which are being preprocessed  
  &nbsp;&nbsp;|- cleaned_aggregated_columns_demographics.csv  
  &nbsp;&nbsp;|- cleaned_asylum_seekers.csv  
  &nbsp;&nbsp;|- cleaned_asylum_seekers_added.csv  
@@ -145,7 +145,7 @@ library(d3Network)
  &nbsp;&nbsp;|- safety_index.csv  
  &nbsp;&nbsp;|- unemployment_rate.csv  
 
-|- EDA - This folder contains the Tableau workbooks and R files used to perform exploratory data analysis
+|- EDA - This folder contains the Tableau workbooks and R files used to perform exploratory data analysis  
  &nbsp;&nbsp;|- AsylumSeekers EDA(new).twbx  
  &nbsp;&nbsp;|- AsylumSeekers EDA.twbx    
  &nbsp;&nbsp;|- Demographics.twbx    
@@ -159,12 +159,12 @@ library(d3Network)
  &nbsp;&nbsp;|- refugee-analysis-eda.rmb   
  &nbsp;&nbsp;|- unemployment.twbx    
 
-|- general_notebook - This folder contains the python jupyter notebook files used for data preprocessing and exploratory data analysis
+|- general_notebook - This folder contains the python jupyter notebook files used for data preprocessing and exploratory data analysis  
  &nbsp;&nbsp;|- Demographics Preprocessing.ipynb      
  &nbsp;&nbsp;|- File cleaning and preprocessing.ipynb     
  &nbsp;&nbsp;|- G1T7 Exploratory Data Analysis.ipynb     
 
-|- model_notebook - This folder contains the python jupyter notebook files used for building the machine learning models
+|- model_notebook - This folder contains the python jupyter notebook files used for building the machine learning models  
  &nbsp;&nbsp;|- Adaboost_classifier.ipynb      
  &nbsp;&nbsp;|- Decision_Tree_Model.ipynb     
  &nbsp;&nbsp;|- Logistic Regression.ipynb  
