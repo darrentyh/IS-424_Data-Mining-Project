@@ -1,0 +1,337 @@
+---
+title: ' Refugees'
+author: "Vivek Mangipudi"
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 4
+    toc_float: no
+---
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+
+library(ggplot2)
+library(readr)
+library(leaflet)
+library(knitr)
+library(highcharter)
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(viridis)
+library(plotly)
+library(tidyr)
+library(maps)
+library(ggmap)
+library(gridExtra)
+library(countrycode)
+library(stringr)
+library(tidyverse)
+library(maps)
+library(geosphere)
+library(ggmap)
+library(maptools)
+library(networkD3)
+library(d3Network)
+
+ASM <- read_csv("../cleaned_data/cleaned_asylum_seekers_added.csv")
+resettlement <- read_csv("../cleaned_data/cleaned_asylum_seekers_added.csv")
+```
+     
+   
+  
+ 
+```
+
+Add Introduction later  
+
+
+
+**All plots are interactive**    
+
+
+# Country of Origin 
+
+From Which country of Origin have the most number of refugees originated?  
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 8 , fig.height = 6}
+ASM %>% 
+  select(Origin,Total.decisions) %>% 
+  group_by(Origin) %>% 
+  summarise(Total = sum(Total.decisions, na.rm = T)) -> ASM_byorg
+
+ASM_byorg<- arrange(ASM_byorg, -Total)
+
+hchart(ASM_byorg[1:20,], "column", hcaes(`Origin`, y = Total, color = Total)) %>%
+  hc_colorAxis(stops = color_stops(n = 6, colors = c( "#21908C", "#04eadf","#440154"))) %>%
+  hc_add_theme(hc_theme_db()) %>%
+  hc_title(text = "Countries from which most refugees originate : ") %>%
+  hc_credits(enabled = TRUE, text = "Data Source: UNHCR ", style = list(fontSize = "12px")) %>%
+  hc_legend(enabled = FALSE)
+
+``` 
+<br>  
+
+ 
+` 
+```
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10 , fig.height = 10, eval = FALSE}
+
+maps::map('world',col="#b5bebf", fill=TRUE, bg="white", lwd=0.05,mar=rep(0,4),border=0, ylim=c(-100,100) )
+# long lat ; NE will be +ve SW will -ve
+Syria = c(38.9968, 34.8021)
+Afghanistan = c(67.7100, 33.9391)
+Canada = c(-106.3468, 56.13037)
+USA = c( -95.7129, 37.0902)
+UK = c(-3.4360,55.3781)
+Norway = c(8.4689, 60.4720)
+Australia = c(133.7751,- 25.2744)
+Sweden = c( 18.6435,60.128)
+Finland = c(25.7482 , 61.9241)
+
+data=rbind(Syria,Afghanistan, Canada, USA, UK , Norway, Australia, Sweden , Finland) %>% as.data.frame()
+colnames(data)=c("long","lat")
+points(x=data$long, y=data$lat, col="slateblue", cex=1, pch=20)
+text(rownames(data), x=data$long, y=data$lat,  col="black", cex=1, pos=4)
+
+
+#Adding lines between the  points :
+# namz<- c("Canada" , "USA", "UK", "Australia")
+namz<-rownames(data)
+colz<-c("2bdcef", "slateblue" , "#1acfdd" , "black","#A6CEE3", "#1F78B4", "#B2DF8A", "#33A02C", "#FB9A99", "#E31A1C", "#FDBF6F", "#FF7F00", "#CAB2D6", "#6A3D9A", "#B15928")
+
+# for (i in 1:4){
+#   inter <- gcIntermediate(Syria, namz[i], n=100, addStartEnd=TRUE, breakAtDateLine=F)             
+#   lines(inter, col= colz[i], lwd=5)
+#   
+# }
+
+#Syria great circles
+mymap<- function(x,y,z){
+  inter <- gcIntermediate(Syria, x, n=100, addStartEnd=TRUE, breakAtDateLine=F)             
+  lines(inter, col= y, lwd=z)
+     }
+
+# for(i in 2: 5){
+#   mymap(namz[i],colz[i], 5-i )
+# }
+
+mymap(Canada, "#1192a0", 4)
+mymap(USA, "#1192a0", 2)
+mymap(UK, "#1192a0", 2)
+mymap(Norway, "#1192a0", 2)
+mymap(Australia, "#1192a0", 2)
+mymap(Sweden, "#1192a0", 2)
+mymap(Finland, "#1192a0", 2)
+#mymap(Finland, "slateblue", 2)
+
+
+
+
+#Afghanistan
+
+mymapaf<- function(x,y,z){
+  inter <- gcIntermediate(Afghanistan, x, n=100, addStartEnd=TRUE, breakAtDateLine=F)             
+  lines(inter, col= y, lwd=z)
+  
+}
+
+# for(i in 2: 5){
+#   mymap(namz[i],colz[i], 5-i )
+# }
+
+
+
+mymapaf(Canada, "#41037f", 2)
+mymapaf(USA, "#41037f", 2)
+mymapaf(UK, "#41037f", 2)
+mymapaf(Norway, "#41037f", 2)
+mymapaf(Australia, "#41037f", 2)
+mymapaf(Sweden, "#41037f", 2)
+mymapaf(Finland, "#41037f", 2)
+
+```
+
+  
+###  Congo Iraq Refugee Resettlement Movements  
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10 , fig.height = 10}
+
+ 
+SWE = c( 18.6435,60.128)
+Ger = c(10.4515, 51.1657)
+Iraq = c(43.6793 , 33.2232)
+Neth = c(5.2913,52.1326)
+Turkey = c(35.2433,38.9637)
+
+congo = c(21.7587, 4.0383)
+bun = c(29.9189, 3.3731)
+rwanda = c(29.8739, 1.9403)
+uganda = c(32.2903,1.3733)
+kenya = c(37.9062, 0.0236)
+
+#main plotting
+maps::map('world',col="#b5bebf", fill=TRUE, bg="white", lwd=0.05,mar=rep(0,4),border=0, ylim=c(-100,100) )
+data=rbind(SWE, Ger, Iraq, Neth, Turkey, congo, bun , rwanda, uganda, kenya) %>% as.data.frame()
+colnames(data)=c("long","lat")
+points(x=data$long, y=data$lat, col="slateblue", cex=1, pch=20)
+text(rownames(data), x=data$long, y=data$lat,  col="black", cex=0.6, pos=3)
+
+#Irag great circles
+
+mymap<- function(x,y,z){
+  inter <- gcIntermediate(Iraq, x, n=100, addStartEnd=TRUE, breakAtDateLine=F)             
+  lines(inter, col= y, lwd=z)
+    }
+
+
+mymap(SWE, "#1192a0", 2)
+mymap(Ger, "#1192a0", 1)
+mymap(Neth, "#1192a0", 1)
+mymap(Turkey, "#1192a0", 1)
+ 
+#mymap(Finland, "slateblue", 2)
+
+
+# Iraq 
+
+mymapir<- function(x,y,z){
+  inter <- gcIntermediate(congo, x, n=100, addStartEnd=TRUE, breakAtDateLine=F)             
+  lines(inter, col= y, lwd=z)
+}
+mymapir(kenya, "#ef2a9a", 1)
+mymapir(uganda, "#ef2a9a", 1)
+mymapir(rwanda, "#ef2a9a", 1)
+mymapir(bun, "#ef2a9a", 1)
+ 
+```
+<br>
+
+
+### Afghanistan Ukraine Refugees Resettlement Movements
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10 , fig.height = 10}
+
+Afghanistan = c(67.7100, 33.9391)
+SWE = c( 18.6435,60.128)
+UK = c(-3.4360,55.3781)
+Ger = c(10.4515, 51.1657)
+AUS = c(14.5501, 47.5162)
+ 
+ 
+Ukr = c(31.1656, 48.3794)
+Rus = c(105.3188 , 61.5240)
+
+#main plotting
+maps::map('world',col="#b5bebf", fill=TRUE, bg="white", lwd=0.05,mar=rep(0,4),border=0, ylim=c(-100,100) )
+data=rbind(Ger,Afghanistan, UK , AUS, SWE ,Ukr,Rus) %>% as.data.frame()
+colnames(data)=c("long","lat")
+points(x=data$long, y=data$lat, col="slateblue", cex=1, pch=20)
+text(rownames(data), x=data$long, y=data$lat,  col="black", cex=0.6, pos=3)
+
+
+
+
+#Afghanistan
+mymapaf<- function(x,y,z){
+  inter <- gcIntermediate(Afghanistan, x, n=100, addStartEnd=TRUE, breakAtDateLine=F)             
+  lines(inter, col= y, lwd=z)
+  }
+
+mymapaf(Ger, "#41037f", 1)
+ 
+mymapaf(UK, "#41037f", 1)
+ 
+mymapaf(AUS, "#41037f", 1)
+mymapaf(SWE, "#41037f", 1)
+ 
+#mymap(Finland, "slateblue", 2)
+
+
+
+# ukraine
+mymapchn<- function(x,y,z){
+  inter <- gcIntermediate(Ukr, x, n=100, addStartEnd=TRUE, breakAtDateLine=F)             
+  lines(inter, col= y, lwd=z)
+}
+mymapchn(Rus, "#b29d01", 1)
+ 
+
+``` 
+
+  
+```
+
+Can I make map plots more pretty?  Hmm. . .
+
+
+# Network Graphs
+
+### Simple Interactive Force Directed Graphs on Resettlements    
+
+
+***The network graph below is interactive. Feel free to drag push and pull the countries here and there, to best suit your needs.  ***
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10 , fig.height = 10}
+
+simpleNetwork(acc_by_country_all[,1:2] , fontSize = 12, zoom = T , linkDistance = 150)
+
+```     
+
+This network plot is based on the resettlement.csv file.  
+
+After dragging the graph to make it wider, Hover on a node, say Iraq and you can see all the countries in which Iraqi Refugees were provided resettlement.    
+
+As you can see,   
+* Syria Refugees who were given resettlement went mostly to CANADA and USA , or to one of the European Countries.  
+* It is such a pity that there is no trace of any of the rich Middle Eastern countries providing resettlement to the refugees. (Atleast based on this data)   
+*   
+
+
+<br>
+
+### Sankey Plot Resettlements of Refugees from Syria Afghanistan Iraq China
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10 , fig.height = 10}
+
+resettlement %>% 
+  filter(Origin == "Dem. Rep. of the Congo" |Origin == "Afghanistan"|Origin == "Iraq" |Origin == "Ukraine") %>% 
+  select(Origin , Successful , `Country / territory of asylum/residence`) %>% 
+  rename(source =  Origin, target = `Country / territory of asylum/residence`) %>% 
+  group_by(source, target) %>%
+  na.omit() %>% 
+  dplyr::summarize(value = sum(Successful)) %>% 
+  filter(value>18000)-> Sank_usa
+
+Nodes <-rbind(data.frame(name = unique(Sank_usa$source)), data.frame(name = unique(Sank_usa$target)))
+Links <- Sank_usa
+Links$source <- match(Links$source, Nodes$name) - 1
+Links$target <- match(Links$target, Nodes$name) - 1
+
+require(d3Network)
+
+sankeyNetwork(
+  Links = Links,
+  Nodes = Nodes,
+  Source = "source",
+  Target = "target",
+  Value = "value",
+  NodeID = "name",
+  nodeWidth = 60,
+  fontSize = 15
+)
+
+```
+
+#
+
+To do , explore remaining data sets here.      
+
+
+
+**Leave an upvote if you like what you see.  **  
+
+ 
