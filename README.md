@@ -123,12 +123,12 @@ library(d3Network)
 
 ## Folder Structure
 |- original data - This folder contains all the data files which we had downloaded from Kaggle, https://www.kaggle.com/unitednations/refugee-data
-   |- asylum_seekers.csv  
-   |- asylum_seekers_monthly.csv  
-   |- demographics.csv  
-   |- persons_of_concern.csv  
-   |- resettlement.csv  
-   |- time_series.csv  
+ &nbsp;&nbsp;|- asylum_seekers.csv  
+ &nbsp;&nbsp;|- asylum_seekers_monthly.csv  
+ &nbsp;&nbsp;|- demographics.csv  
+ &nbsp;&nbsp;|- persons_of_concern.csv  
+ &nbsp;&nbsp;|- resettlement.csv  
+ &nbsp;&nbsp;|- time_series.csv  
 
 |- cleaned_data - This folder contains all the data files which are being preprocessed 
 
