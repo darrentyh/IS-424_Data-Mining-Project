@@ -131,10 +131,43 @@ library(d3Network)
  &nbsp;&nbsp;|- time_series.csv  
 
 |- cleaned_data - This folder contains all the data files which are being preprocessed 
+ &nbsp;&nbsp;|- cleaned_aggregated_columns_demographics.csv  
+ &nbsp;&nbsp;|- cleaned_asylum_seekers.csv  
+ &nbsp;&nbsp;|- cleaned_asylum_seekers_added.csv  
+ &nbsp;&nbsp;|- cleaned_demographics.csv 
+ &nbsp;&nbsp;|- cleaned_GDP_Per_Capital_2001-2016.csv  
+ &nbsp;&nbsp;|- cleaned_people_of_concern.csv  
+ &nbsp;&nbsp;|- cleaned_resettlement.csv  
+ &nbsp;&nbsp;|- cleaned_unemployment_rate.csv  
+ &nbsp;&nbsp;|- countries.csv  
+ &nbsp;&nbsp;|- GDP_Per_Capital_2001-2016.csv  
+ &nbsp;&nbsp;|- Human Development Index (HDI).csv 
+ &nbsp;&nbsp;|- safety_index.csv  
+ &nbsp;&nbsp;|- unemployment_rate.csv  
 
 |- EDA - This folder contains the Tableau workbooks and R files used to perform exploratory data analysis
+ &nbsp;&nbsp;|- AsylumSeekers EDA(new).twbx  
+ &nbsp;&nbsp;|- AsylumSeekers EDA.twbx    
+ &nbsp;&nbsp;|- Demographics.twbx    
+ &nbsp;&nbsp;|- Distance_difference.csv 
+ &nbsp;&nbsp;|- Distance_difference.twbx   
+ &nbsp;&nbsp;|- GDP_perCapita.twbx  
+ &nbsp;&nbsp;|- GDPperCapita.csv  
+ &nbsp;&nbsp;|- HDI.twbx    
+ &nbsp;&nbsp;|- merge_data EDA.twbx    
+ &nbsp;&nbsp;|- PeopleOfConcern EDA.twbx    
+ &nbsp;&nbsp;|- refugee-analysis-eda.rmb   
+ &nbsp;&nbsp;|- unemployment.twbx    
 
 |- general_notebook - This folder contains the python jupyter notebook files used for data preprocessing and exploratory data analysis
+ &nbsp;&nbsp;|- Demographics Preprocessing.ipynb      
+ &nbsp;&nbsp;|- File cleaning and preprocessing.ipynb     
+ &nbsp;&nbsp;|- G1T7 Exploratory Data Analysis.ipynb     
 
 |- model_notebook - This folder contains the python jupyter notebook files used for building the machine learning models
+ &nbsp;&nbsp;|- Adaboost_classifier.ipynb      
+ &nbsp;&nbsp;|- Decision_Tree_Model.ipynb     
+ &nbsp;&nbsp;|- Logistic Regression.ipynb 
+ &nbsp;&nbsp;|- Naive_Bayes_SVM_Model.ipynb      
+ &nbsp;&nbsp;|- Random_Forest_Model.ipynb    
 
