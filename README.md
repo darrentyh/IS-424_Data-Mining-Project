@@ -124,8 +124,12 @@ library(d3Network)
 
 ## Folder Structure
 |- original data - This folder contains all the data files which we had downloaded from Kaggle, https://www.kaggle.com/unitednations/refugee-data
+
 |- cleaned_data - This folder contains all the data files which are being preprocessed 
+
 |- EDA - This folder contains the Tableau workbooks and R files used to perform exploratory data analysis
+
 |- general_notebook - This folder contains the python jupyter notebook files used for data preprocessing and exploratory data analysis
+
 |- model_notebook - This folder contains the python jupyter notebook files used for building the machine learning models
 
