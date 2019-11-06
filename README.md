@@ -1,93 +1,103 @@
-# IS-434_Data-Mining-Project-
+# IS-434_Data-Mining-Project
+
 Analysis on Asylum seekers migration pattern and demographics 
 
-Model:
-#Sklearn:
-A Simple and efficient tools for data mining and data analysis
+## Packages Used (Python)
 
-#Sklearn.Tree import DecisionTreeClassifier:
-DecisionTreeClassifier is a class capable of performing multi-class classification on a dataset.
+The main python packages used for this project includes geotext, geocoder, re, numpy, pandas, scikit-learn, seaborn and math
 
+Refer to information below which describes the uses of the packages.
 
-#Sklearn.ensemble import AdaboostClassifier:
-The module Sklearn.ensemble include adaboost which can be used for classification and regression problem
+# sklearn:
+A Simple and efficient tools for data mining and data analysis - https://scikit-learn.org/stable/
 
-#Sklearn.Tree.import RandomForestClassifier:
-RandomForestClassifier is a class capable of performing multi-class classification on a dataset.
+# sklearn.Tree import DecisionTreeClassifier:
+A decision tree classifier capable of performing multi-class classification on a dataset - https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
 
-#dataset
+# sklearn.ensemble import AdaboostClassifier:
+A meta-estimator that begins by fitting a classifier on the original dataset and then fits the additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html
 
-#linearmodel:
+# sklearn.Tree.ensemble import RandomForestClassifier:
+A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
 
-#From Sklearn.model_selection import GridSearchCV:
-The grid search provided by GridSearchCV exhaustively generates candidates from a grid of parameter values specified with the param_grid parameter
+# sklearn.model_selection import train_test_split
+Splits arrays or matrices into random train and test subsets - https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
 
-#From Sklearn.model_selection import train_test_split:
-A random split into training and test sets can be quickly computed with the train_test_split helper function.
+# sklearn.metrics import accuracy_score
+Computes subset accuracy - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html
 
-#From Sklearn.metrics import accuracy_score
-In multilabel classification, this function computes subset accuracy: the set of labels predicted for a sample must exactly match the corresponding set of labels in y_true.
+# sklearn.metrics import confusion_matrix
+Evaluates the confusion matrix to evaluate the accurcy of a classification - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
 
-#confusion_matrix:
-Compute confusion matrix to evaluate the accuracy of a classification.
+# sklearn.metrics import classification_report
+Builds a text report showing the main classification metrics - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
 
-#classification_report:
-Function builds a text report showing the main classification metrics.
+# sklearn.model_selection import GridSearchCV
+Exhaustive search over specified parameter values for an estimator - https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html 
 
-#math:
-This module provides access to the mathematical functions defined by the C standard.
+# sklearn import svm
+Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection - https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
 
-#datasets:
-Toolkit for Python-based database access.
+# sklearn.naive_bayes import MultinomialNB
+Naives Bayes classifier for multinomial models - https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
 
-#metrics
+# sklearn.model_selection import StratifiedKFold
+Stratified K-Folds cross-validator which provides train/test indices to split data in train/test sets - https://www.google.com/search?q=stratified+k+fold&rlz=1C1CHBF_enSG747SG748&oq=stratfied+k&aqs=chrome.1.69i57j0l5.3764j0j4&sourceid=chrome&ie=UTF-8
 
-#CondensedNearestNeighbour
-#resample
-#SVC
-#SVM
-#GuassianNB
-#MulitnomialNB
-#SMOTE
-#StratifiedKFold
-#RFE
-#RFECV
-#RandomUnderSampler
+# sklearn.feature_selection import RFE
+Feature ranking with recursive feature elimination - https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
 
+# sklearn.feature_selection import RFECV
+Feature ranking with recursive feature elimination and cross-validated selection of the best number of features - https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html
 
-Preprocessing:
+# sklearn import linear_model
+A set of methods intended for regression in which the target value is expected to be a linear combination of the features - https://scikit-learn.org/stable/modules/linear_model.html
 
-#numpy
+# imblearn.over_sampling import SMOTE
+Class to perform over-sampling using SMOTE, Synthetic Minority Over-sampling - https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.over_sampling.SMOTE.html
 
-Numpy is a fundamental package for scientific computing with Python.
+# imblearn.under_sampling import RandomUnderSampler
+Class to perform random under-sampling. Under-sample the majority class(es) by randomly picking samples with or without replacement - https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.under_sampling.RandomUnderSampler.html
 
-#pandas
+# imblearn.under_sampling import CondensedNearestNeighbour
+Class to perform under-sampling based on the condensed nearest neighbour method - https://imbalanced-learn.readthedocs.io/en/stable/generated/imblearn.under_sampling.CondensedNearestNeighbour.html
 
-Pandas is a library providing high-performance, easy-to-use data structures and data analysis tools.
+# geotext
+Geotext extracts country and city mentions from text - https://pypi.org/project/geotext/
 
-#re
+# geocoder
+Geocoder is a simple and consistent geocoding library - https://pypi.org/project/geocoder/
 
-#geotext
+# numpy
+numpy is a fundamental package for scientific computing with Python - https://numpy.org/
 
-Geotext extracts country and city mentions from text.
+# pandas
+Pandas is a library providing high-performance, easy-to-use data structures and data analysis tools - https://pandas.pydata.org/
 
-#geocoder
+# seaborn
+Seaborn is a python visualization library based on matplotlib, it provides a high-level interface for drawing attractive and informative statistical graphics - https://seaborn.pydata.org/
 
-Geocoder is a simple and consistent geocoding library.
+# re
+Provides regular expression matching operations similar to those found in Perl - https://docs.python.org/3/library/re.html
 
-#matplotlib
+# math
+Provides access to the mathematical functions defined by the C standard. - https://docs.python.org/3/library/math.html
 
-MAtplotlib is a  Python 2D plotting library.
+## Installtation (Python packages)
 
-#pyplot
+The python packages used in this project can be installed using the following commands:
 
-Pyplot is a Collaborative web plotting for Python and matplotlib.
+pip install numpy
+pip install pandas
+pip install geocoder
+pip install geotext
+pip install seaborn
+pip install scikit-learn
 
-#Seaborn
+math and re libray are built-in python module and do not require any installation
 
-Seaborn is a python visualization library based on matplotlib.
+## Packages used (R)
 
-EDA:
 library(ggplot2)
 library(readr)
 library(leaflet)
@@ -111,4 +121,11 @@ library(ggmap)
 library(maptools)
 library(networkD3)
 library(d3Network)
-Tableau
+
+## Folder Structure
+|- original data - This folder contains all the data files which we had downloaded from Kaggle, https://www.kaggle.com/unitednations/refugee-data
+|- cleaned_data - This folder contains all the data files which are being preprocessed 
+|- EDA - This folder contains the Tableau workbooks and R files used to perform exploratory data analysis
+|- general_notebook - This folder contains the python jupyter notebook files used for data preprocessing and exploratory data analysis
+|- model_notebook - This folder contains the python jupyter notebook files used for building the machine learning models
+
